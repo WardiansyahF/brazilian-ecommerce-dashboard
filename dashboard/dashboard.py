@@ -139,7 +139,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 
 # ========= TAB 1: KATEGORI PRODUK =========
 with tab1:
-    st.subheader("Kategori Produk Terlaris dan Paling Menguntungkan")
+    st.subheader("1. Kategori Produk dengan Pesanan dan Pendapatan Tertinggi (Jan 2017 - Ags 2018)")
     
     # Hitung data berdasarkan filter
     category_orders = (
@@ -200,7 +200,7 @@ with tab1:
 
 # ========= TAB 2: PENJUALAN PER WILAYAH =========
 with tab2:
-    st.subheader("Wilayah dan Kota dengan Penjualan atau Profit Tertinggi")
+    st.subheader("2. Penjualan dan Profit Tertinggi per Wilayah Kota (Jan 2017 - Ags 2018)")
     
     city_sales = (
         filtered_df.groupby('customer_city')
@@ -279,7 +279,7 @@ with tab2:
 
 # ========= TAB 3: PELANGGAN AKTIF =========
 with tab3:
-    st.subheader("Jumlah Pelanggan Aktif dan Tidak Aktif per Kota")
+    st.subheader("3. Jumlah Pelanggan Aktif (>1 Transaksi) dan Tidak Aktif per Kota (Jan 2017 - Ags 2018)")
     
     # Pelanggan yang punya lebih dari 1 order = aktif, 1 order = tidak aktif
     customer_activity = (
@@ -352,7 +352,7 @@ with tab3:
 
 # ========= TAB 4: TREN PENJUALAN =========
 with tab4:
-    st.subheader("Tren Penjualan dari Waktu ke Waktu")
+    st.subheader("4. Tren Penjualan Bulanan dan Musiman (Jan 2017 - Ags 2018)")
     
     # Monthly trend
     monthly_data = (
